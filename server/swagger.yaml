@@ -1,0 +1,127 @@
+---
+swagger: "2.0"
+info:
+  description: "A third cut at writing the code initial formed in web.py for the\
+    \ PiMoroni UnicornHAT\n"
+  version: "0.1.0"
+  title: "Mustrum"
+host: "192.168.1.88:8080"
+schemes:
+- "http"
+paths:
+  /all_pixels:
+    get:
+      tags:
+      - "default_controller"
+      operationId: "controllers.default_controller.all_pixels_get"
+      parameters: []
+      responses:
+        200:
+          description: "2d colour array of all pixels"
+          schema:
+            $ref: "#/definitions/pixelmap"
+  /dot/{x}:
+    put:
+      tags:
+      - "default_controller"
+      description: "Paint a single pixel"
+      operationId: "controllers.default_controller.dot_x_put"
+      parameters:
+      - in: "body"
+        name: "colour"
+        required: true
+        schema:
+          $ref: "#/definitions/colour"
+      - name: "x"
+        in: "path"
+        description: "x component of pixel"
+        required: true
+        type: "number"
+        format: "integer"
+      - name: "y"
+        in: "query"
+        description: "y component of pixel"
+        required: true
+        type: "number"
+        format: "integer"
+      responses:
+        200:
+          description: "Success"
+  /monoframe/{pixelmap}:
+    put:
+      tags:
+      - "default_controller"
+      description: "Shows single frame"
+      operationId: "controllers.default_controller.monoframe_pixelmap_put"
+      parameters:
+      - name: "pixelmap"
+        in: "path"
+        description: "map of pixel"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "colour"
+        required: true
+        schema:
+          $ref: "#/definitions/colour"
+      responses:
+        200:
+          description: "Success"
+  /monoline:
+    put:
+      tags:
+      - "default_controller"
+      description: "Sets single line"
+      operationId: "controllers.default_controller.monoline_put"
+      parameters:
+      - name: "line"
+        in: "query"
+        description: "location of line"
+        required: false
+        type: "number"
+        format: "integer"
+      - name: "pixelmap"
+        in: "query"
+        description: "bitmap of pixels to show"
+        required: false
+        type: "string"
+      - in: "body"
+        name: "colour"
+        required: true
+        schema:
+          $ref: "#/definitions/colour"
+      responses:
+        200:
+          description: "Success"
+  /show:
+    get:
+      tags:
+      - "default_controller"
+      description: "Show all set pixels"
+      operationId: "controllers.default_controller.show_get"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+definitions:
+  colour:
+    type: "object"
+    properties:
+      red:
+        type: "integer"
+        minimum: 0
+        maximum: 255
+      green:
+        type: "integer"
+        minimum: 0
+        maximum: 255
+      blue:
+        type: "integer"
+        minimum: 0
+        maximum: 255
+  pixelmap:
+    type: "array"
+    items:
+      type: "array"
+      items:
+        $ref: "#/definitions/colour"
