@@ -1,0 +1,80 @@
+hash: 7b357d4d116761795f4e3ae402e2345cee505935d0beb1e8b436a716d562949b
+updated: 2019-04-28T14:06:59.975265003+01:00
+imports:
+- name: github.com/asaskevich/govalidator
+  version: f61b66f89f4a311bef65f13e575bcf1a2ffadda6
+- name: github.com/docker/go-units
+  version: 519db1ee28dcc9fd2474ae59fca29a810482bfb1
+- name: github.com/globalsign/mgo
+  version: eeefdecb41b842af6dc652aaea4026e8403e62df
+  subpackages:
+  - bson
+  - internal/json
+- name: github.com/go-openapi/analysis
+  version: e2f3fdbb7ed0e56e070ccbfb6fc75b288a33c014
+  subpackages:
+  - internal
+- name: github.com/go-openapi/errors
+  version: 7a7ff1b7b8020f22574411a32f28b4d168d69237
+- name: github.com/go-openapi/jsonpointer
+  version: ef5f0afec364d3b9396b7b77b43dbe26bf1f8004
+- name: github.com/go-openapi/jsonreference
+  version: 8483a886a90412cd6858df4ea3483dce9c8e35a3
+- name: github.com/go-openapi/loads
+  version: 74628589c3b94e3526a842d24f46589980f5ab22
+- name: github.com/go-openapi/runtime
+  version: 109737172424d8a656fd1199e28c9f5cc89b0cca
+  subpackages:
+  - flagext
+  - logger
+  - middleware
+  - middleware/denco
+  - middleware/header
+  - middleware/untyped
+  - security
+- name: github.com/go-openapi/spec
+  version: 53d776530bf78a11b03a7b52dd8a083086b045e5
+- name: github.com/go-openapi/strfmt
+  version: 29177d4b5db488583bb97ebc05d3842ebeda91a8
+- name: github.com/go-openapi/swag
+  version: b3e2804c8535ee0d1b89320afd98474d5b8e9e3b
+- name: github.com/go-openapi/validate
+  version: 5b1623be7460f5a3967a82c00d518048fb190f5e
+- name: github.com/jessevdk/go-flags
+  version: c6ca198ec95c841fdb89fc0de7496fed11ab854e
+- name: github.com/mailru/easyjson
+  version: 1ea4449da9834f4d333f1cc461c374aea217d249
+  subpackages:
+  - buffer
+  - jlexer
+  - jwriter
+- name: github.com/mitchellh/mapstructure
+  version: 3536a929edddb9a5b34bd6861dc4a9647cb459fe
+- name: github.com/PuerkitoBio/purell
+  version: 44968752391892e1b0d0b821ee79e9a85fa13049
+- name: github.com/PuerkitoBio/urlesc
+  version: de5bf2ad457846296e2031421a34e2568e304e35
+- name: github.com/qiniu/errors
+  version: 4aa58a55ece75dc0efce5a2e2908457f35534f3e
+- name: github.com/qiniu/log
+  version: a304a74568d6982c5b89de1c68ac8fca3add196a
+- name: github.com/qiniu/py
+  version: 8425e7e84b81a574f659beb9057949d9f48af20a
+- name: github.com/spf13/pflag
+  version: 298182f68c66c05229eb03ac171abe6e309ee79a
+- name: golang.org/x/net
+  version: 4829fb13d2c62012c17688fa7f629f371014946d
+  subpackages:
+  - idna
+  - netutil
+- name: golang.org/x/text
+  version: 342b2e1fbaa52c93f31447ad2c6abc048c63e475
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+  - width
+- name: gopkg.in/yaml.v2
+  version: 51d6538a90f86fe93ac480b35f37b2be17fef232
+testImports: []
